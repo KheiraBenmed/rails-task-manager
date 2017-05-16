@@ -9,11 +9,11 @@ class TasksController < ApplicationController
   end
 
   def new
-    @task = Task.new(tasks_params)
+    @task = Task.new
   end
 
   def create
-    @task = Task.new(params[:restaurant])
+    @task = Task.new(tasks_params)
     @task.save
     redirect_to task_path(@task)
   end
@@ -35,7 +35,7 @@ class TasksController < ApplicationController
   def tasks_params
     # *Strong params*: You need to *whitelist* what can be updated by the user
     # Never trust user data!
-    params.require(:task).permit(:name, :descritpion)
+    params.require(:task).permit(:name, :description)
   end
 
   def set_task
