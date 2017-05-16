@@ -7,4 +7,5 @@
 #   Character.create(name: 'Luke', movie: movies.first)
 Task.create(name: "Fromager", description: "Acheter du Napoleon")
 Task.create(name: "Italien", description: "Récupérer les scarmossa")
+Task.create(name: "SNCF", description: "Renouveler la carte")
 
