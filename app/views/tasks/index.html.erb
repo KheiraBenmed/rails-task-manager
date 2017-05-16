@@ -1,2 +1,17 @@
-<h1>Tasks#index</h1>
-<p>Find me in app/views/tasks/index.html.erb</p>
+<h1>Voici l'index de mes tâches</h1>
+
+<div class="container">
+  <div class="row">
+    <div class="col-xs-10 col-xs-offset-1">
+      <ol class="list-group">
+        <% @tasks.each do |task| %>
+          <li class="list-group-item">
+            <span class="badge"><%= index + 1 %></span>
+            <%= task.name %>
+            <%= task.description %>
+          </li>
+        <% end %>
+      </ol>
+    </div>
+  </div>
+</div>
